@@ -1,0 +1,9 @@
+EXT_Garage:
+  control: hidden
+  entities:
+    - sensor.temperature_senseur5
+#    - sensor.humidite_senseur5
+    - sensor.temperature2_senseur5
+#    - sensor.humidite2_senseur5
+    - history_graph.temperature_garage
+    - cover.ryobi_gdo_d4f513d3c950

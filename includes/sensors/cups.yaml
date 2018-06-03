@@ -1,0 +1,3 @@
+- platform: cups
+  printers:
+    - Imprimante_Bureau

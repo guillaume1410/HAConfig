@@ -1,0 +1,898 @@
+- alias: Allumer chevet basile jour non travaillé
+  id: auto_100
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: time
+    at: 07:00:00
+  condition:
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'off'
+  - condition: state
+    entity_id: input_boolean.parents_a_la_maison
+    state: 'on'
+  - condition: state
+    entity_id: light.chevet_de_basile
+    state: 'on'
+  action:
+    service: scene.turn_on
+    entity_id: scene.chevet_basile_vert
+- alias: Allumer chevet basile jour travaillé
+  id: auto_200
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: time
+    at: 06:20:00
+  condition:
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'on'
+  - condition: state
+    entity_id: input_boolean.parents_a_la_maison
+    state: 'on'
+  - condition: state
+    entity_id: light.chevet_de_basile
+    state: 'on'
+  action:
+    service: scene.turn_on
+    entity_id: scene.chevet_basile_vert
+- alias: Allumer chevet basile soir veille jour travaillé
+  id: auto_300
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - at: '19:00:00'
+    platform: time
+  condition:
+  - condition: state
+    entity_id: binary_sensor.workday_tomorrow
+    state: 'on'
+  - condition: state
+    entity_id: input_boolean.parents_a_la_maison
+    state: 'on'
+  - condition: state
+    entity_id: light.chevet_de_basile
+    state: 'off'
+  action:
+  - data:
+      brightness: 168
+      entity_id:
+      - light.chevet_de_basile
+      rgb_color:
+      - 168
+      - 95
+      - 27
+    service: light.turn_on
+  - data:
+      brightness: 168
+      entity_id:
+      - light.chevet_de_basile
+      rgb_color:
+      - 168
+      - 95
+      - 27
+    service: light.turn_on
+- alias: Allumer pour petit dej samedi
+  id: auto_400
+  initial_state: false
+  hide_entity: false
+  trigger:
+  - platform: time
+    at: 07:00:00
+  condition:
+  - condition: template
+    value_template: '{{ states.sensor.lumiere_senseur1.state | int < 100 }}'
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'off'
+  - condition: state
+    entity_id: input_boolean.parents_a_la_maison
+    state: 'on'
+  action:
+    service: script.allumer_cuisine_petit_dej
+- alias: Allumer pour petit dej semaine
+  id: auto_500
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: time
+    at: 06:15:00
+  condition:
+  - condition: template
+    value_template: '{{ states.sensor.lumiere_senseur1.state | int < 100 }}'
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'on'
+  - condition: state
+    entity_id: input_boolean.parents_a_la_maison
+    state: 'on'
+  action:
+    service: script.allumer_cuisine_petit_dej
+- alias: Allumer escalier matin samedi
+  id: auto_600
+  initial_state: false
+  hide_entity: false
+  trigger:
+  - platform: time
+    at: 07:00:00
+  condition:
+  - condition: template
+    value_template: '{{ states.sensor.lumiere_senseur1.state | int < 100 }}'
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'off'
+  - condition: state
+    entity_id: input_boolean.parents_a_la_maison
+    state: 'on'
+  action:
+    service: script.allumer_escalier_matin
+- alias: Allumer escalier matin semaine
+  id: auto_700
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: time
+    at: 06:10:00
+  condition:
+  - condition: template
+    value_template: '{{ states.sensor.lumiere_senseur1.state | int < 100 }}'
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'on'
+  - condition: state
+    entity_id: input_boolean.parents_a_la_maison
+    state: 'on'
+  action:
+    service: script.allumer_escalier_matin
+- alias: Allumer exterieur entrée au coucher du soleil
+  id: auto_800
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: -00:30:00
+  action:
+  - service: light.turn_on
+    data:
+      entity_id:
+      - light.espurna_0c306e
+      - light.espurna_078e54
+      brightness: 255
+- alias: Allumer lapin louise matin non travaillé
+  id: auto_900
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: time
+    at: 07:00:00
+  condition:
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'off'
+  - condition: state
+    entity_id: input_boolean.parents_a_la_maison
+    state: 'on'
+  - condition: state
+    entity_id: light.lapin_de_louise
+    state: 'on'
+  action:
+    service: scene.turn_on
+    entity_id: scene.lapin_louise_vert
+- alias: Allumer lapin louise matin travaillé
+  id: auto_1000
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: time
+    at: 06:20:00
+  condition:
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'on'
+  - condition: state
+    entity_id: input_boolean.parents_a_la_maison
+    state: 'on'
+  - condition: state
+    entity_id: light.lapin_de_louise
+    state: 'on'
+  action:
+    service: scene.turn_on
+    entity_id: scene.lapin_louise_vert
+- alias: Allumer lapin louise soir veille jour travaillé
+  id: auto_1100
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - at: '19:00:00'
+    platform: time
+  condition:
+  - condition: state
+    entity_id: binary_sensor.workday_tomorrow
+    state: 'on'
+  - condition: state
+    entity_id: input_boolean.parents_a_la_maison
+    state: 'on'
+  - condition: state
+    entity_id: light.lapin_de_louise
+    state: 'off'
+  action:
+  - data:
+      brightness: 168
+      entity_id:
+      - light.lapin_de_louise
+      rgb_color:
+      - 55
+      - 105
+      - 127
+    service: light.turn_on
+  - data:
+      brightness: 168
+      entity_id:
+      - light.lapin_de_louise
+      rgb_color:
+      - 55
+      - 105
+      - 127
+    service: light.turn_on
+- alias: Allumer après coucher du soleil
+  id: auto_1200
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - event: sunset
+    platform: sun
+  action:
+  - data:
+      brightness: 255
+      entity_id: light.lampes_salon, light.plafond_salle_a_manger
+    service: light.turn_on
+  condition:
+  - condition: state
+    entity_id: input_boolean.parents_a_la_maison
+    state: 'off'
+- alias: Arret kodi salle familiale
+  id: auto_1400
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: media_player.kodi_salle_familiale
+    from: playing
+    to: paused
+  - platform: state
+    entity_id: media_player.kodi_salle_familiale
+    from: playing
+    to: idle
+  action:
+    service: script.arret_media_salle_familiale
+- alias: Arret kodi salon
+  id: auto_1500
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: media_player.kodi_salon
+    from: playing
+    to: paused
+  - platform: state
+    entity_id: media_player.kodi_salon
+    from: playing
+    to: idle
+  condition:
+    condition: sun
+    after: sunset
+  action:
+    service: script.arret_media_salon
+- alias: Effet des LEDs de la salle familiale
+  id: auto_1600
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: input_select.effet_led_salle_familiale
+  action:
+  - service: mqtt.publish
+    data_template:
+      topic: bruh/mqttstrip/seteffect
+      payload: '{{ trigger.to_state.state | string }}'
+- alias: Allumer exterieur si quelqu un rentre après 23h
+  id: auto_1700
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: input_boolean.guillaume_a_la_maison, input_boolean.philo_a_la_maison
+    to: 'on'
+  condition:
+    condition: time
+    after: '23:01:00'
+    before: 05:00:00
+  action:
+    service: script.allumer_entree_10minutes
+- alias: Eteindre cinéma maison après 1H
+  id: auto_1800
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: time
+    at: 01:00:00
+  action:
+  - service: media_player.turn_off
+    entity_id: media_player.ampli
+- alias: Eteindre exterieur à 23h
+  id: auto_1900
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: time
+    at: '23:00:00'
+  action:
+    service: light.turn_off
+    entity_id:
+    - light.espurna_0c306e
+    - light.espurna_078e54
+- alias: Eteindre plafond salle familiale apres 1H
+  id: auto_2000
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: light.plafond_salle_familiale
+    to: 'on'
+  action:
+  - service: script.turn_off
+    data:
+      entity_id: script.garder_plaf_sf_allume
+  - service: script.garder_plaf_sf_allume
+- alias: Fermer la porte patio si les parents ne sont plus à la maison
+  id: auto_2100
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: input_boolean.parents_a_la_maison
+    to: 'off'
+  action:
+  - service: lock.lock
+    data:
+      entity_id: lock.porte_patio
+- alias: grader escalier les soirs de semaine
+  id: auto_2200
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: time
+    at: '19:30:00'
+  condition:
+  - condition: state
+    entity_id: binary_sensor.workday_tomorrow
+    state: 'on'
+  - condition: state
+    entity_id: input_boolean.parents_a_la_maison
+    state: 'on'
+  action:
+  - service: light.turn_on
+    data:
+      entity_id: light.plafond_escalier
+      brightness: 50
+- alias: Lecture kodi salle familiale
+  id: auto_2200
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: media_player.kodi_salle_familiale
+    from: idle
+    to: playing
+  - platform: state
+    entity_id: media_player.kodi_salle_familiale
+    from: paused
+    to: playing
+  action:
+  - service: script.turn_off
+    data:
+      entity_id: script.arret_media_salle_familiale
+  - service: script.jouer_media_salle_familiale
+- alias: Lecture kodi salon
+  id: auto_2300
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: media_player.kodi_salon
+    from: idle
+    to: playing
+  - platform: state
+    entity_id: media_player.kodi_salon
+    from: paused
+    to: playing
+  condition:
+    condition: sun
+    after: sunset
+  action:
+    service: script.jouer_media_salon
+- alias: Notifier lors arrivee Philo
+  id: auto_2400
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: input_boolean.philo_a_la_maison
+    to: 'on'
+  condition:
+    condition: time
+    after: '16:01:00'
+    before: '23:00:00'
+  action:
+    service: notify.ios_iphone8guillaume
+    data:
+      message: Philo arrive !!!
+- alias: Notifier la meteo de la journée à guillaume le matin jour travaillé
+  id: auto_2500
+  hide_entity: false
+  trigger:
+  - platform: time
+    at: 06:15:00
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: binary_sensor.workday_sensor
+      state: 'on'
+    - condition: state
+      entity_id: input_boolean.guillaume_a_la_maison
+      state: 'on'
+  action:
+    service: notify.ios_iphone8guillaume
+    data:
+      message: Meteo {{ states.sensor.pws_weather_1d_metric.state }}
+- alias: Notifier guillaume au demarrage de HA
+  id: auto_2600
+  initial_state: true
+  hide_entity: false
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    service: notify.ios_iphone8guillaume
+    data:
+      message: HA démarré
+      data:
+        push:
+          sound: bloop_x.wav
+- alias: Notifier si pawned
+  id: auto_2700
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: sensor.breaches_guillaumevigourouxgmailcom
+  - platform: state
+    entity_id: sensor.breaches_superguillaumegmailcom
+  action:
+    service: notify.ios_iphone8guillaume
+    data:
+      message: Pawned !!!
+      data:
+        push:
+          sound: bloop_x.wav
+- alias: Notifier Guillaume à la fin de l'impression
+  id: auto_2700
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: sensor.imprimante_bureau
+    to: idle
+  condition:
+  - condition: state
+    entity_id: input_boolean.guillaume_a_la_maison
+    state: 'on'
+  action:
+    service: notify.ios_iphone8guillaume
+    data:
+      message: Impression terminée
+- alias: Notifier Guillaume si Basile joue avec sa lampe
+  id: auto_2800
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: light.chevet_de_basile
+  condition:
+    condition: and
+    conditions:
+    - condition: time
+      after: '20:00:00'
+      before: 04:00:00
+    - condition: state
+      entity_id: input_boolean.guillaume_a_la_maison
+      state: 'on'
+  action:
+    service: notify.ios_iphone8guillaume
+    data:
+      message: Basile joue avec sa Lampe. La luminosité est de {{ states.light.chevet_de_basile.attributes.brightness
+        }}
+- alias: Notifier Guillaume si Louise joue avec sa lampe
+  id: auto_2900
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: light.lapin_de_louise
+  condition:
+    condition: and
+    conditions:
+    - condition: time
+      after: '20:00:00'
+      before: 04:00:00
+    - condition: state
+      entity_id: input_boolean.guillaume_a_la_maison
+      state: 'on'
+  action:
+    service: notify.ios_iphone8guillaume
+    data:
+      message: Loulou joue avec sa Lampe. La luminosité est de {{ states.light.lapin_de_louise.attributes.brightness
+        }}
+- alias: Notifier Philo à la fin de l'impression
+  id: auto_3000
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: sensor.imprimante_bureau
+    to: idle
+  condition:
+  - condition: state
+    entity_id: input_boolean.philo_a_la_maison
+    state: 'on'
+  action:
+    service: notify.ios_iphonephilo
+    data:
+      message: Impression terminée
+- alias: Notifier Philo si Basile joue avec sa lampe
+  id: auto_3100
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: light.chevet_de_basile
+  condition:
+    condition: and
+    conditions:
+    - condition: time
+      after: '20:00:00'
+      before: 04:00:00
+    - condition: state
+      entity_id: input_boolean.philo_a_la_maison
+      state: 'on'
+  action:
+    service: notify.ios_iphonephilo
+    data:
+      message: Basile joue avec sa Lampe. La luminosité est de {{ states.light.chevet_de_basile.attributes.brightness
+        }}
+- alias: Notifier Philo si Louise joue avec sa lampe
+  id: auto_3200
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: light.lapin_de_louise
+  condition:
+    condition: and
+    conditions:
+    - condition: time
+      after: '20:00:00'
+      before: 04:00:00
+    - condition: state
+      entity_id: input_boolean.philo_a_la_maison
+      state: 'on'
+  action:
+    service: notify.ios_iphonephilo
+    data:
+      message: Loulou joue avec sa Lampe. La luminosité est de {{ states.light.lapin_de_louise.attributes.brightness
+        }}
+- alias: Envoyer notif expiration certificat
+  id: auto_3300
+  initial_state: true
+  hide_entity: false
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.ssl_cert_expiry
+    below: 10
+  action:
+    service: notify.ios_iphone8guillaume
+    data:
+      message: Penser à renouveler le certificat!
+- alias: Guillaume plus à la maison maj parents
+  id: auto_3400
+  initial_state: true
+  hide_entity: false
+  trigger:
+    platform: state
+    entity_id: input_boolean.guillaume_a_la_maison
+    to: 'off'
+  condition:
+    condition: state
+    entity_id: input_boolean.philo_a_la_maison
+    state: 'off'
+  action:
+    service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.parents_a_la_maison
+- alias: Guillaume plus à la maison
+  id: auto_3500
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: template
+    value_template: '{% if not is_state(''device_tracker.2bbf2d61f7b54b13bd121a8b4cffea3f'',
+      ''home'') %}true{% endif %}'
+  action:
+  - service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.guillaume_a_la_maison
+- alias: Guillaume retour à la maison maj parents
+  id: auto_3600
+  initial_state: true
+  hide_entity: false
+  trigger:
+    platform: state
+    entity_id: input_boolean.guillaume_a_la_maison
+    to: 'on'
+  action:
+    service: input_boolean.turn_on
+    data:
+      entity_id: input_boolean.parents_a_la_maison
+- alias: Guillaume retour à la maison
+  id: auto_3700
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: template
+    value_template: '{% if is_state(''device_tracker.2bbf2d61f7b54b13bd121a8b4cffea3f'',
+      ''home'') %}true{% endif %}'
+  action:
+  - service: input_boolean.turn_on
+    data:
+      entity_id: input_boolean.guillaume_a_la_maison
+- alias: Notification si màj disponible
+  id: auto_3800
+  trigger:
+    platform: state
+    entity_id: updater.updater
+  action:
+    service: notify.ios_iphone8guillaume
+    data:
+      message: Update for Home Assistant is available.
+- alias: Notfier si NAS devient anormal
+  trigger:
+  - platform: template
+    value_template: '{% if not is_state(''sensor.status_volume_1'', ''normal'') %}true{%
+      endif %}'
+  action:
+    service: notify.ios_iphone8guillaume
+    data:
+      message: Etat de NAS a changé
+- alias: Philo plus à la maison maj parents
+  id: auto_3800
+  initial_state: true
+  hide_entity: false
+  trigger:
+    platform: state
+    entity_id: input_boolean.philo_a_la_maison
+    to: 'off'
+  condition:
+    condition: state
+    entity_id: input_boolean.guillaume_a_la_maison
+    state: 'off'
+  action:
+    service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.parents_a_la_maison
+- alias: Philo plus à la maison
+  id: auto_3900
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: template
+    value_template: '{% if not is_state(''device_tracker.902164849cf246ffa0d10033f3c570d7'',
+      ''home'') %}true{% endif %}'
+  action:
+  - service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.philo_a_la_maison
+- alias: Philo retour à la maison maj parents
+  id: auto_4000
+  initial_state: true
+  hide_entity: false
+  trigger:
+    platform: state
+    entity_id: input_boolean.philo_a_la_maison
+    to: 'on'
+  action:
+    service: input_boolean.turn_on
+    data:
+      entity_id: input_boolean.parents_a_la_maison
+- alias: Philo retour à la maison
+  id: auto_4100
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: template
+    value_template: '{% if is_state(''device_tracker.902164849cf246ffa0d10033f3c570d7'',
+      ''home'') %}true{% endif %}'
+  action:
+  - service: input_boolean.turn_on
+    data:
+      entity_id: input_boolean.philo_a_la_maison
+- alias: Vitesse d'animation LEDs salle familiale
+  id: auto_4200
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: input_number.vitesse_led_salle_familiale
+  action:
+  - service: mqtt.publish
+    data_template:
+      topic: bruh/mqttstrip/setanimationspeed
+      payload: '{{ trigger.to_state.state | int }}'
+- alias: Notifier Guillaume si on sonne
+  id: auto_4300
+  initial_state: false
+  hide_entity: false
+  trigger:
+  - entity_id: sensor.sonette_senseur6
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+  - service: notify.ios_iphone8guillaume
+    data:
+      message: On sonne, RawValue est de {{ states.sensor.rawvalue_senseur6.state}}
+- alias: Notifier Guillaume a la fin de la secheuse
+  id: auto_4400
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - entity_id: sensor.secheuse_senseur7
+    platform: state
+    from: 'on'
+    to: 'off'
+    for:
+      seconds: 10
+  condition:
+  - condition: state
+    entity_id: input_boolean.guillaume_a_la_maison
+    state: 'on'
+  action:
+  - service: notify.ios_iphone8guillaume
+    data:
+      message: Le sechage est fini!
+      data:
+        push:
+          sound: US-EN-Morgan-Freeman-Roommate-Is-Arriving.wav
+- alias: Notifier Philo a la fin de la secheuse
+  id: auto_4500
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - entity_id: sensor.secheuse_senseur7
+    platform: state
+    from: 'on'
+    to: 'off'
+    for:
+      seconds: 10
+  condition:
+  - condition: state
+    entity_id: input_boolean.philo_a_la_maison
+    state: 'on'
+  action:
+  - service: notify.ios_iphonephilo
+    data:
+      message: Le sechage est fini!
+- alias: Allumer chauffage sdb parents jours travaillés et philo travaille le matin
+  id: auto_4500
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: time
+    at: 05:40:00
+  condition:
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'on'
+  - condition: state
+    entity_id: input_boolean.parents_a_la_maison
+    state: 'on'
+  - condition: state
+    entity_id: calendar.philo_matin
+    state: 'on'
+  action:
+  - service: script.allumer_chauffage_sdb_parents
+  - service: script.turn_off
+    data:
+      entity_id: script.garder_chauffage_sdb_parents_dix_minutes
+- alias: Allumer chauffage sdb parents jours travaillés et philo travaille pas le
+    matin
+  id: auto_4550
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: time
+    at: 06:00:00
+  condition:
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'on'
+  - condition: state
+    entity_id: input_boolean.parents_a_la_maison
+    state: 'on'
+  - condition: state
+    entity_id: calendar.philo_matin
+    state: 'off'
+  action:
+  - service: script.allumer_chauffage_sdb_parents
+  - service: script.turn_off
+    data:
+      entity_id: script.garder_chauffage_sdb_parents_dix_minutes
+- alias: Allumer chauffage sdb parents jours non travaillés
+  id: auto_4600
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: time
+    at: 07:30:00
+  condition:
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'off'
+  - condition: state
+    entity_id: input_boolean.parents_a_la_maison
+    state: 'on'
+  action:
+  - service: script.allumer_chauffage_sdb_parents
+  - service: script.turn_off
+    data:
+      entity_id: script.garder_chauffage_sdb_parents_dix_minutes
+- alias: Eteindre chauffage sdb parents apres dix minutes
+  id: auto_4700
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - platform: state
+    entity_id: switch.chauffage_salle_de_bain
+    to: 'on'
+  action:
+  - service: script.turn_off
+    data:
+      entity_id: script.garder_chauffage_sdb_x_minutes
+  - service: script.garder_chauffage_sdb_x_minutes
+- alias: Notifier Guillaume quand le chat est nourrit
+  id: auto_5200
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - entity_id: sensor.distributeurnourriturechat_senseur8
+    platform: state
+    from: 'on'
+    to: 'off'
+  action:
+  - service: notify.ios_iphone8guillaume
+    data:
+      message: Le chat est nourrit!
+- alias: activer distributeur de distri_croquettes
+  id: auto_5300
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - entity_id: light.distri_croquettes
+    platform: state
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.activer_distributeur_croquettes

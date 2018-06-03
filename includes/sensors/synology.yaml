@@ -1,0 +1,11 @@
+- platform: synologydsm
+  host: !secret synologydsm_host
+  username: !secret synologydsm_username
+  password: !secret synologydsm_password
+  port: !secret synologydsm_port
+  monitored_conditions:
+    - volume_status
+    - volume_percentage_used
+    - cpu_15min_load
+    - volume_disk_temp_avg
+    - disk_smart_status

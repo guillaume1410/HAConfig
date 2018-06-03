@@ -1,0 +1,6 @@
+EXT:
+  view: yes
+  entities:
+    - group.EXT_EntreeRue
+    - group.EXT_Veranda
+    - group.EXT_Garage

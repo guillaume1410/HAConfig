@@ -1,0 +1,4 @@
+  philo_a_la_maison:
+    name: Philo à la maison
+    initial: on
+    icon: mdi:cellphone-iphone

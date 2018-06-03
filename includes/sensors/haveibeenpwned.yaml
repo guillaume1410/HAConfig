@@ -1,0 +1,6 @@
+- platform: haveibeenpwned
+  email:
+    - !secret emailguillaume
+    - !secret emailguillaume2
+    - !secret emailphilo
+    - !secret emailphilo2

@@ -1,0 +1,7 @@
+alias: "garder chauffage sdb parents x minutes"
+sequence:
+  - delay: '00:15:00'
+  - service: switch.turn_off
+    data:
+      entity_id:
+        - switch.chauffage_salle_de_bain

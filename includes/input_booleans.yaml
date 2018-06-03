@@ -1,0 +1,15 @@
+  guillaume_a_la_maison:
+    name: Guillaume à la maison
+    initial: on
+    icon: mdi:cellphone-iphone
+  parents_a_la_maison:
+    name: Parents à la maison
+    initial: on
+    icon: mdi:cellphone-iphone
+  philo_a_la_maison:
+    name: Philo à la maison
+    initial: on
+    icon: mdi:cellphone-iphone
+  philo_travaille_le_matin:
+    name: Philo travaille le matin
+    initial: off

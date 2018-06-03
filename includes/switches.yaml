@@ -1,0 +1,6 @@
+#  - platform: tplink
+#    host: !secret prise_sdb_parents
+  - platform: mqtt
+    command_topic: "sensors/sensor9/set"
+    state_topic: "sensors/sensor9"
+    name: Creature JBL

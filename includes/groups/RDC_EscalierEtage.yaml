@@ -1,0 +1,4 @@
+RDC_EscalierEtage:
+  control: hidden
+  entities:
+    - light.plafond_escalier

@@ -1,0 +1,6 @@
+alias: "Arret media salon"
+sequence:
+  - service: light.turn_on
+    data:
+      entity_id: light.lampes_salon
+      brightness: 255

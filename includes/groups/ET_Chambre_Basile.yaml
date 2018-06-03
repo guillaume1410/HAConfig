@@ -1,0 +1,5 @@
+ET_ChambreBasile:
+  control: hidden
+  entities:
+    - light.chevet_de_basile
+    - light.plafonnier_de_basile

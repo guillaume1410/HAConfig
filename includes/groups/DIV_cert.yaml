@@ -1,0 +1,4 @@
+certinfos:
+  control: hidden
+  entities:
+    - sensor.ssl_cert_expiry

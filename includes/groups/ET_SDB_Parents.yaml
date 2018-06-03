@@ -1,0 +1,4 @@
+ET_SDB_Parents:
+  control: hidden
+  entities:
+    - switch.chauffage_salle_de_bain

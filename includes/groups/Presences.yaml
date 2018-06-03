@@ -1,0 +1,6 @@
+Présences:
+  entities:
+    - device_tracker.2bbf2d61f7b54b13bd121a8b4cffea3f
+    - device_tracker.902164849cf246ffa0d10033f3c570d7
+    - sensor.maison__boulot_guillaume_a_pied
+    - sensor.retour_a_la_maison_en_voiture

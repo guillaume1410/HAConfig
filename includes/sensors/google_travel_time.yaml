@@ -1,0 +1,15 @@
+- platform: google_travel_time
+  api_key: !secret google_travel_time_api_key
+  origin: !secret google_travel_time_api_key_origin
+  destination: !secret google_travel_time_api_key_destination
+  name: Maison - Boulot guillaume à pied
+  options:
+    mode: walking
+
+- platform: google_travel_time
+  api_key: !secret google_travel_time_api_key
+  origin: device_tracker.2bbf2d61f7b54b13bd121a8b4cffea3f
+  destination: zone.Home
+  name: Retour à la maison en voiture
+  options:
+    mode: driving

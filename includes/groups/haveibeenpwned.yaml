@@ -1,0 +1,5 @@
+haveibeenpwned:
+  control: hidden
+  entities:
+  - sensor.breaches_guillaumevigourouxgmailcom
+  - sensor.breaches_superguillaumegmailcom

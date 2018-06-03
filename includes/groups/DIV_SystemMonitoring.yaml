@@ -1,0 +1,21 @@
+SystemMonitoring:
+  entities:
+    - sensor.last_boot
+    - sensor.ram_use
+#    - sensor.ram_free
+#    - sensor.ram_free_2
+#    - sensor.ram_use_2
+    - sensor.cpu_use
+#    - sensor.disk_free_
+    - sensor.disk_used_
+#    - sensor.disk_use__2
+#    - sensor.ipv4_address_eth0
+#    - sensor.ipv6_address_eth0
+#    - sensor.packets_received_eth0
+#    - sensor.packets_sent_eth0
+#    - sensor.received_eth0
+#    - sensor.sent_eth0
+#    - sensor.since_last_boot
+#    - sensor.swap_free
+    - sensor.swap_used
+#    - sensor.swap_use_2

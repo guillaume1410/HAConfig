@@ -1,0 +1,10 @@
+ET:
+  view: yes
+  entities:
+    - group.RDC_EscalierEtage
+    - group.ET_ChambreParents
+    - group.ET_ChambreLouise
+    - group.ET_ChambreBasile
+    - group.ET_Walkin
+    - group.ET_SDB_Parents
+    - group.ET_Bureau

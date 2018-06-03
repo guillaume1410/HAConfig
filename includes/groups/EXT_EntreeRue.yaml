@@ -1,0 +1,8 @@
+EXT_EntreeRue:
+  control: hidden
+  entities:
+#    - light.entree_exterieur_droit
+#    - light.entree_exterieur_gauche
+    - light.espurna_0c306e
+    - light.espurna_078e54
+    - sensor.sonette_senseur6

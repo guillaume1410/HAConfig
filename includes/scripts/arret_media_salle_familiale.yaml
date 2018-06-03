@@ -1,0 +1,27 @@
+alias: "Arret media salle familiale"
+sequence:
+  - service: light.turn_on
+    data:
+      entity_id: light.plafond_salle_familiale
+      brightness: 1
+  - service: mqtt.publish
+    data_template:
+      topic: "bruh/mqttstrip/seteffect"
+      payload: 'Solid'
+  - service: mqtt.publish
+    data_template:
+      topic: "bruh/mqttstrip/setcolor"
+      payload: "245,255,92"
+  - service: light.turn_on
+    data:
+      entity_id: light.leds_de_la_salle_familiale
+      brightness: 50
+  - delay: '00:30:00'
+  - service: media_player.turn_off
+    entity_id: media_player.ampli
+  - service: light.turn_off
+    data:
+      entity_id: light.plafond_salle_familiale
+  - service: light.turn_off
+    data:
+      entity_id: light.leds_de_la_salle_familiale

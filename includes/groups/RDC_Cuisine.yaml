@@ -1,0 +1,11 @@
+RDC_Cuisine:
+  control: hidden
+  entities:
+    - light.plafond_cuisine
+    - light.plafond_banquette_cuisine
+    - sensor.temperature_senseur4
+    - sensor.humidite_senseur4
+    - lock.porte_patio
+    - sensor.distributeurNourritureChat_senseur8
+    - history_graph.temperature_cuisine
+    - light.distri_croquettes

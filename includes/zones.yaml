@@ -1,0 +1,20 @@
+#zone 2:
+  - name: !secret nom_job_guillaume
+    latitude: !secret latitude_job_guillaume
+    longitude: !secret longitude_job_guillaume
+    radius: 50
+    icon: mdi:briefcase
+
+#zone 3:
+  - name: !secret nom_job_philo
+    latitude: !secret latitude_job_philo
+    longitude: !secret longitude_job_philo
+    radius: 50
+    icon: mdi:hospital-building
+
+#zone 4:
+  - name: !secret nom_place_enfants
+    latitude: !secret latitude_place_enfants
+    longitude: !secret longitude_place_enfants
+    radius: 50
+    icon: mdi:school

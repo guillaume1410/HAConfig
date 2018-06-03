@@ -1,0 +1,4 @@
+ET_ChambreLouise:
+  control: hidden
+  entities:
+    - light.lapin_de_louise

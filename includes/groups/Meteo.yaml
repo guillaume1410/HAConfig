@@ -1,0 +1,11 @@
+Météo:
+  entities:
+    - sensor.pws_temp_c
+    - sensor.pws_feelslike_c
+    - sensor.pws_pressure_mb
+    - sensor.pws_relative_humidity
+    - sensor.moon
+    - sensor.pws_weather_1d_metric
+    - sensor.pws_weather_2d_metric
+    - sensor.pws_weather_3d_metric
+    - sensor.pws_weather_4d_metric

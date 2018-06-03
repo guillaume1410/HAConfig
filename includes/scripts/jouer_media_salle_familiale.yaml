@@ -1,0 +1,9 @@
+alias: "Jouer media salle familiale"
+sequence:
+  - service: light.turn_off
+    data:
+      entity_id:
+        - light.plafond_salle_familiale
+  - service: light.turn_off
+    data:
+      entity_id: light.leds_de_la_salle_familiale

@@ -1,0 +1,7 @@
+RDC:
+  view: yes
+  entities:
+    - group.RDC_Salon
+    - group.RDC_Cuisine
+    - group.RDC_SalleAManger
+    - group.RDC_EscalierEtage

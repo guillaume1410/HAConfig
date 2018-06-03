@@ -1,0 +1,4 @@
+  parents_a_la_maison:
+    name: Parents à la maison
+    initial: on
+    icon: mdi:cellphone-iphone

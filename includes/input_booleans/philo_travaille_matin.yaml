@@ -1,0 +1,3 @@
+  philo_travaille_le_matin:
+    name: Philo travaille le matin
+    initial: off

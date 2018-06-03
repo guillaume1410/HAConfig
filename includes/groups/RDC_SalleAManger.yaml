@@ -1,0 +1,4 @@
+RDC_SalleAManger:
+  control: hidden
+  entities:
+    - light.plafond_salle_a_manger

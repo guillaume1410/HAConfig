@@ -1,0 +1,10 @@
+alias: "Jouer media salon"
+sequence:
+  - service: light.turn_on
+    data:
+      entity_id: light.lampes_salon
+      brightness: 25
+      transition: 150
+  - service: light.turn_off
+    data:
+      entity_id: light.luminaire_salon

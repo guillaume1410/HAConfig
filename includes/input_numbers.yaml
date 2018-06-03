@@ -1,0 +1,6 @@
+vitesse_led_salle_familiale:
+  name: Vitesse d'animation LEDs salle familiale
+  initial: 150
+  min: 1
+  max: 150
+  step: 10

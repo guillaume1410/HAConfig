@@ -1,0 +1,110 @@
+- platform: mqtt
+  state_topic: 'sensors/sensor1'
+  name: 'lumiere_senseur1'
+  unit_of_measurement: 'lux'
+  value_template: '{{ value_json.light }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor1'
+  name: 'temperature_senseur1'
+  unit_of_measurement: '°C'
+  value_template: '{{ value_json.temperature }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor1'
+  name: 'humidite_senseur1'
+  unit_of_measurement: '%'
+  value_template: '{{ value_json.humidity }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor1'
+  name: 'pression_senseur1'
+  unit_of_measurement: 'Pa'
+  value_template: '{{ value_json.pressure }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor2'
+  name: 'temperature_senseur2'
+  unit_of_measurement: '°C'
+  value_template: '{{ value_json.temperature }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor2'
+  name: 'humidite_senseur2'
+  unit_of_measurement: '%'
+  value_template: '{{ value_json.humidity }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor2'
+  name: 'batterie_senseur2'
+  unit_of_measurement: 'V'
+  value_template: '{{ value_json.battery }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor3'
+  name: 'temperature_senseur3'
+  unit_of_measurement: '°C'
+  value_template: '{{ value_json.temperature }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor3'
+  name: 'humidite_senseur3'
+  unit_of_measurement: '%'
+  value_template: '{{ value_json.humidity }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor3'
+  name: 'batterie_senseur3'
+  unit_of_measurement: 'V'
+  value_template: '{{ value_json.battery }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor4'
+  name: 'temperature_senseur4'
+  unit_of_measurement: '°C'
+  value_template: '{{ value_json.temperature }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor4'
+  name: 'humidite_senseur4'
+  unit_of_measurement: '%'
+  value_template: '{{ value_json.humidity }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor4'
+  name: 'batterie_senseur4'
+  unit_of_measurement: 'V'
+  value_template: '{{ value_json.battery }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor5'
+  name: 'temperature_senseur5'
+  unit_of_measurement: '°C'
+  value_template: '{{ value_json.temperature }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor5'
+  name: 'humidite_senseur5'
+  unit_of_measurement: '%'
+  value_template: '{{ value_json.humidity }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor5'
+  name: 'batterie_senseur5'
+  unit_of_measurement: 'V'
+  value_template: '{{ value_json.battery }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor5'
+  name: 'humidite2_senseur5'
+  unit_of_measurement: '%'
+  value_template: '{{ value_json.humidity2 }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor5'
+  name: 'temperature2_senseur5'
+  unit_of_measurement: '°C'
+  value_template: '{{ value_json.temperature2 }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor6'
+  name: 'sonette_senseur6'
+  value_template: '{{ value_json.doorbell }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor6'
+  name: 'rawvalue_senseur6'
+  value_template: '{{ value_json.rawValue }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor7'
+  name: 'secheuse_senseur7'
+  value_template: '{{ value_json.dryer }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor8'
+  name: 'distributeurNourritureChat_senseur8'
+  value_template: '{{ value_json.catFeeder }}'
+- platform: mqtt
+  state_topic: 'sensors/sensor8'
+  name: 'timeStamp_senseur8'
+  value_template: '{{ value_json.timeStamp }}'

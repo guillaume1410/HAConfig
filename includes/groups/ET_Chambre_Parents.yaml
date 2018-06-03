@@ -1,0 +1,6 @@
+ET_ChambreParents:
+  control: hidden
+  entities:
+    - sensor.temperature_senseur3
+    - sensor.humidite_senseur3
+    - history_graph.temperature_chambre_parents

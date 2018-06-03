@@ -1,0 +1,8 @@
+NAS:
+  entities:
+    - sensor.volume_used_volume_1
+    - sensor.status_volume_1
+    - sensor.status_smart_sdb
+    - sensor.status_smart_sda
+    - sensor.average_disk_temp_volume_1
+    - sensor.cpu_load_15_min

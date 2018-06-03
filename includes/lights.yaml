@@ -1,0 +1,61 @@
+  - platform: mqtt
+    name: "LEDs de la salle familiale"
+    command_topic: "bruh/mqttstrip/setpower"
+    state_topic: "bruh/mqttstrip/setpowerpub"
+    rgb_state_topic: "bruh/mqttstrip/setcolorpub"
+    rgb_command_topic: "bruh/mqttstrip/setcolor"
+    brightness_state_topic: "bruh/mqttstrip/setbrightnesspub"
+    brightness_command_topic: "bruh/mqttstrip/setbrightness"
+    optimistic: false
+  - platform: mqtt
+    name: "distri croquettes"
+    command_topic: "fake/topic"
+    optimistic: false
+  - name: ESPURNA_0C306E
+    platform: mqtt
+    state_topic: ESPURNA_0C306E/relay/0
+    command_topic: ESPURNA_0C306E/relay/0/set
+    payload_on: 1
+    payload_off: 0
+    availability_topic: ESPURNA_0C306E/status
+    payload_available: 1
+    payload_not_available: 0
+    brightness_state_topic: ESPURNA_0C306E/brightness
+    brightness_command_topic: ESPURNA_0C306E/brightness/set
+    rgb_state_topic: ESPURNA_0C306E/rgb
+    rgb_command_topic: ESPURNA_0C306E/rgb/set
+    color_temp_command_topic: ESPURNA_0C306E/mired/set
+    white_value_state_topic: ESPURNA_0C306E/channel/3
+    white_value_command_topic: ESPURNA_0C306E/channel/3/set
+  - name: ESPURNA_078E54
+    platform: mqtt
+    state_topic: ESPURNA_078E54/relay/0
+    command_topic: ESPURNA_078E54/relay/0/set
+    payload_on: 1
+    payload_off: 0
+    availability_topic: ESPURNA_078E54/status
+    payload_available: 1
+    payload_not_available: 0
+    brightness_state_topic: ESPURNA_078E54/brightness
+    brightness_command_topic: ESPURNA_078E54/brightness/set
+    rgb_state_topic: ESPURNA_078E54/rgb
+    rgb_command_topic: ESPURNA_078E54/rgb/set
+    color_temp_command_topic: ESPURNA_078E54/mired/set
+    white_value_state_topic: ESPURNA_078E54/channel/3
+    white_value_command_topic: ESPURNA_078E54/channel/3/set
+  - name: ESPURNA_0BEA72
+    platform: mqtt
+    state_topic: ESPURNA_0BEA72/relay/0
+    command_topic: ESPURNA_0BEA72/relay/0/set
+    payload_on: 1
+    payload_off: 0
+    availability_topic: ESPURNA_0BEA72/status
+    payload_available: 1
+    payload_not_available: 0
+    brightness_state_topic: ESPURNA_0BEA72/brightness
+    brightness_command_topic: ESPURNA_0BEA72/brightness/set
+    rgb_state_topic: ESPURNA_0BEA72/rgb
+    rgb_command_topic: ESPURNA_0BEA72/rgb/set
+    color_temp_command_topic: ESPURNA_0BEA72/mired/set
+    white_value_state_topic: ESPURNA_0BEA72/channel/3
+    white_value_command_topic: ESPURNA_0BEA72/channel/3/set

@@ -1,0 +1,145 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: !secret home_elevation
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: !secret home_time_zone
+  # Include to customization
+  customize: !include customize.yaml
+
+# Enable ios app:
+ios:
+
+# Enables the frontend
+frontend:
+  javascript_version: es5
+
+http:
+  # Uncomment this to add a password (recommended!)
+  api_password: !secret http_password
+  # Uncomment this if you are using SSL or running in Docker etc
+  base_url: !secret http_base_url
+  ssl_certificate: !secret docker_http_ssl_certificate
+  ssl_key: !secret docker_http_ssl_key
+
+# Checks for available updates
+#updater:
+
+#Use homekit
+homekit:
+  filter:
+      exclude_domains:
+        - script
+        - device_tracker
+        - remote
+        - input_boolean
+        - binary_sensor
+      exclude_entities:
+        - sensor.pws_temp_c
+        - sensor.pws_feelslike_c
+
+# Utiliser l'enregistreur
+recorder:
+  purge_interval: 2
+  purge_keep_days: 7
+#  db_url: !secret recorder_db_url
+
+# View all events in a logbook
+logbook:
+  exclude:
+    entities:
+      - sensor.pws_weather_1d_metric
+      - sensor.pws_weather_2d_metric
+      - sensor.pws_weather_3d_metric
+      - sensor.pws_weather_4d_metric
+      - sensor.timestamp_senseur8
+
+#logger:
+#  default: critical
+#  logs:
+#    custom_components.cover.ryobi: info
+
+# Track the sun
+sun:
+
+# Example configuration.yaml entry
+config:
+
+logger:
+  default: error
+#  logs:
+#    custom_components.cover.ryobi: debug
+
+
+wink:
+  email: !secret wink_email
+  password: !secret wink_password
+  client_id: !secret wink_client_id
+  client_secret: !secret wink_client_secret
+  local_control: True
+
+mqtt:
+  broker: !secret mqtt_broker_ip
+  port: !secret mqtt_broker_port
+  client_id: home-assistant
+  keepalive: 60
+  protocol: 3.1
+
+climate:
+  platform: honeywell
+  username: !secret honeywell_username
+  password: !secret honeywell_password
+  region: us
+  scan_intervall: 600
+
+google:
+  client_id: !secret google_client_id
+  client_secret: !secret google_client_secret
+
+map:
+
+script: !include_dir_named includes/scripts
+automation: !include automations.yaml
+group: !include_dir_merge_named includes/groups
+scene: !include_dir_merge_list includes/scenes
+sensor: !include_dir_merge_list includes/sensors
+input_boolean: !include includes/input_booleans.yaml
+input_number: !include includes/input_numbers.yaml
+history: !include includes/history.yaml
+history_graph: !include includes/history_graphs.yaml
+zone: !include includes/zones.yaml
+switch: !include includes/switches.yaml
+media_player: !include includes/media_players.yaml
+binary_sensor: !include includes/binary_sensors.yaml
+input_select: !include includes/input_selects.yaml
+device_tracker: !include includes/device_trackers.yaml
+light: !include includes/lights.yaml
+cover:
+  - platform: ryobi_gdo
+    username: !secret ryobi_username
+    password: !secret ryobi_password
+    device_id:
+      - !secret ryobi_device_id1
+
+#hdmi_cec:
+#  devices:
+#    TV: 0.0.0.0
+
+#ifttt:
+#  key: !client_secret ifttt_key
+
+# Text to speech
+#tts:
+#  platform: google
+
+# Discover some devices automatically
+#discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+#conversation:

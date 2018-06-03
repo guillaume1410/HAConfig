@@ -1,0 +1,9 @@
+SS_SalleFamiliale:
+  control: hidden
+  entities:
+    - light.plafond_salle_familiale
+    - media_player.kodi_salle_familiale
+    - media_player.ampli
+    - light.leds_de_la_salle_familiale
+    - input_select.effet_led_salle_familiale
+    - input_slider.vitesse_led_salle_familiale

@@ -1,0 +1,9 @@
+EXT_Veranda:
+  control: hidden
+  entities:
+    - light.veranda
+    - sensor.lumiere_senseur1
+    - sensor.temperature_senseur1
+    - sensor.humidite_senseur1
+    - sensor.pression_senseur1
+    - history_graph.temperature_veranda

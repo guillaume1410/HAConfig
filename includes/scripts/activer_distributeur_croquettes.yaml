@@ -1,0 +1,10 @@
+alias: "Activer distributeur croquettes"
+sequence:
+  - service: mqtt.publish
+    data_template:
+      topic: sensors/sensor8/set
+      payload: '{"catFeeder":"ON"}'
+  - service: light.turn_off
+    data:
+      entity_id:
+        - light.distri_croquettes

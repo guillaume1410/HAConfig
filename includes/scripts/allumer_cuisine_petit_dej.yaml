@@ -1,0 +1,14 @@
+alias: "Allumer cuisine pour petit dej"
+sequence:
+  - service: light.turn_on
+    data:
+      entity_id:
+        - light.plafond_banquette_cuisine
+        - light.plafond_cuisine
+      brightness: 150
+  - delay: '00:45:00'
+  - service: light.turn_off
+    data:
+      entity_id:
+        - light.plafond_banquette_cuisine
+        - light.plafond_cuisine

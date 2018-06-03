@@ -1,0 +1,7 @@
+batteries:
+  control: hidden
+  entities:
+    - sensor.iphone_de_guillaume_battery_level
+    - sensor.iphone_de_guillaume_battery_state
+    - sensor.iphone_de_philo_battery_level
+    - sensor.iphone_de_philo_battery_state

@@ -1,0 +1,4 @@
+ET_Bureau:
+  control: hidden
+  entities:
+    - sensor.imprimante_bureau

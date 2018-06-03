@@ -1,0 +1,7 @@
+alias: "garder plafond salle familiale allume pour une heure"
+sequence:
+  - delay: '01:00:00'
+  - service: light.turn_off
+    data:
+      entity_id:
+        - light.plafond_salle_familiale

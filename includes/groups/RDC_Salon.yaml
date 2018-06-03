@@ -1,0 +1,10 @@
+RDC_Salon:
+  control: hidden
+  entities:
+    - light.lampes_salon
+    - light.luminaire_salon
+    - media_player.kodi_salon
+    - media_player.tele_salon
+    - media_player.samsung_tv_remote
+    - switch.creature_jbl
+    - light.espurna_0bea72

@@ -1,0 +1,4 @@
+Hydro:
+  entities:
+    - sensor.hydroquebec_period_total_consumption
+    - sensor.hydroquebec_yesterday_total_consumption

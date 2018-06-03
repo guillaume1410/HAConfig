@@ -1,0 +1,4 @@
+heartbeats:
+  control: hidden
+  entities:
+    - sensor.timestamp_senseur8

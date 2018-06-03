@@ -1,0 +1,26 @@
+  temperature_chambre_philo_et_guillaume:
+    name: Température chambre parents
+    hours_to_show: 48
+    entities:
+      - sensor.temperature_senseur3
+  temperature_dans_la_veranda:
+    name: Température véranda
+    hours_to_show: 48
+    entities:
+      - sensor.temperature_senseur1
+  temperature_dans_la_cuisine:
+    name: température cuisine
+    hours_to_show: 48
+    entities:
+      - sensor.temperature_senseur4
+  temperature_dans_le_cellier:
+    name: Température cellier
+    hours_to_show: 48
+    entities:
+      - sensor.temperature_senseur2
+  temperature_dans_le_garage:
+    name: Température garage
+    hours_to_show: 48
+    entities:
+      - sensor.temperature_senseur5
+      - sensor.temperature2_senseur5

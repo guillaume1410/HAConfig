@@ -1,0 +1,6 @@
+SS:
+  view: yes
+  entities:
+    - group.SS_SalleFamiliale
+    - group.SS_Cellier
+    - group.Buanderie

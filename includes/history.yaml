@@ -1,0 +1,32 @@
+  include:
+    domains:
+      - switch
+      - light
+      - climate
+      - device_tracker
+    entities:
+      - sensor.hydroquebec_yesterday_total_consumption
+      - sensor.pws_temp_c
+      - sensor.pws_relative_humidity
+      - sensor.pws_feelslike_c
+      - sensor.pws_pressure_mb
+      - sensor.lumiere_senseur1
+      - sensor.temperature_senseur1
+      - sensor.humidite_senseur1
+      - sensor.pression_senseur1
+      - sensor.temperature_senseur2
+      - sensor.humidite_senseur2
+      - sensor.temperature_senseur3
+      - sensor.humidite_senseur3
+      - sensor.temperature_senseur4
+      - sensor.humidite_senseur4
+      - sensor.disk_use_percent
+      - sensor.speedtest_ping
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+  exclude:
+    entities:
+      - sensor.pws_weather_1d_metric
+      - sensor.pws_weather_2d_metric
+      - sensor.pws_weather_3d_metric
+      - sensor.pws_weather_4d_metric

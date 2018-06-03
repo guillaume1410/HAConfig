@@ -1,0 +1,14 @@
+alias: "Allumer entree_10_minute"
+sequence:
+  - service: light.turn_on
+    data:
+      entity_id:
+        - light.espurna_0c306e
+        - light.espurna_078e54
+      brightness: 255
+  - delay: '00:10:00'
+  - service: light.turn_off
+    data:
+      entity_id:
+        - light.espurna_0c306e
+        - light.espurna_078e54

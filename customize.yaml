@@ -1,0 +1,348 @@
+binary_sensor.hub_salon_hub:
+  homebridge_hidden: true
+  hidden: true
+sensor.samsung_clp360_series:
+  friendly_name: Imprimante Bureau
+  homebridge_hidden: true
+sensor.maison__industrielle_alliance_a_pied:
+  friendly_name: Temps pour aller travailler à pied
+  homebridge_hidden: true
+sensor.retour_a_la_maison_en_voiture:
+  friendly_name: Temps pour revenir à la maison en voiture
+  homebridge_hidden: true
+sensor.hydroquebec_yesterday_total_consumption:
+  friendly_name: Consommation veille
+  homebridge_hidden: true
+sensor.hydroquebec_period_total_consumption:
+  friendly_name: Consommation période
+  homebridge_hidden: true
+sensor.pws_feelslike_c:
+  friendly_name: Temp. ressentie
+  homebridge_hidden: true
+sensor.pws_wind_kph:
+  friendly_name: Vitesse du vent
+  homebridge_hidden: true
+sensor.pws_temp_c:
+  friendly_name: Temp.
+  homebridge_hidden: true
+sensor.pws_pressure_mb:
+  friendly_name: Pression
+  homebridge_hidden: true
+sensor.pws_relative_humidity:
+  friendly_name: Humidité
+  homebridge_hidden: true
+sensor.pws_uv:
+  friendly_name: Indice UV
+  homebridge_hidden: true
+sensor.pws_alerts:
+  friendly_name: Alertes
+  homebridge_hidden: true
+sensor.pws_observation_time:
+  friendly_name: Date de mise à jour
+  homebridge_hidden: true
+sensor.pws_heat_index_c:
+  homebridge_hidden: true
+sensor.pws_dewpoint_c:
+  homebridge_hidden: true
+sensor.lumiere_senseur1:
+  friendly_name: Luminosité véranda
+  icon: mdi:white-balance-sunny
+sensor.temperature_senseur1:
+  friendly_name: Température véranda
+  icon: mdi:thermometer
+sensor.humidite_senseur1:
+  friendly_name: Humidité véranda
+  icon: mdi:water-percent
+sensor.pression_senseur1:
+  friendly_name: Pression véranda
+  icon: mdi:gauge
+sensor.temperature_senseur2:
+  friendly_name: Température cellier
+  icon: mdi:thermometer
+sensor.humidite_senseur2:
+  friendly_name: Humidité cellier
+  icon: mdi:water-percent
+sensor.batterie_senseur2:
+  friendly_name: Batterie cellier
+  homebridge_hidden: true
+  icon: mdi:battery
+sensor.temperature_senseur3:
+  friendly_name: Température chambre parents
+  icon: mdi:thermometer
+sensor.humidite_senseur3:
+  friendly_name: Humidité chambre parents
+  icon: mdi:water-percent
+sensor.batterie_senseur3:
+  friendly_name: Batterie chambre parents
+  homebridge_hidden: true
+  icon: mdi:battery
+sensor.temperature_senseur4:
+  friendly_name: Température cuisine
+  icon: mdi:thermometer
+sensor.humidite_senseur4:
+  friendly_name: Humidité cuisine
+  icon: mdi:water-percent
+sensor.batterie_senseur4:
+  friendly_name: Batterie cuisine
+  homebridge_hidden: true
+  icon: mdi:battery
+sensor.average_disk_temp_volume_1:
+  friendly_name: Température de disques
+  homebridge_hidden: true
+sensor.volume_used_volume_1:
+  friendly_name: Utilisation des disques
+  homebridge_hidden: true
+sensor.status_smart_sda:
+  friendly_name: Etat SMART du disque 1
+  homebridge_hidden: true
+sensor.status_smart_sdb:
+  friendly_name: Etat SMART du disque 2
+  homebridge_hidden: true
+sensor.status_volume_1:
+  friendly_name: Etat du NAS
+  homebridge_hidden: true
+sensor.last_boot:
+  friendly_name: Dernier boot
+  homebridge_hidden: true
+sensor.ram_use:
+  friendly_name: Pourcentage de mémoire utilisé
+  homebridge_hidden: true
+sensor.cpu_use:
+  friendly_name: Pourcentage de processeur utilisé
+  homebridge_hidden: true
+sensor.disk_use_:
+  friendly_name: Pourcentage de disque utilisé
+  homebridge_hidden: true
+sensor.swap_use:
+  friendly_name: Pourcentage de swap utilisé
+  homebridge_hidden: true
+sensor.temperature_senseur5:
+  friendly_name: Température garage
+sensor.temperature2_senseur5:
+  friendly_name: Temperature plafond garage
+sensor.humidite2_senseur5:
+  friendly_name: Humidité plafond garage
+sensor.humidite_senseur5:
+  friendly_name: Humidité garage
+sensor.secheuse_senseur7:
+  friendly_name: Sécheuse
+  icon: mdi:tshirt-crew
+sensor.distributeurNourritureChat_senseur8:
+  friendly_name: Distributeur de croquettes
+  icon: mdi:cat
+sensor.timestamp_senseur8:
+  friendly_name: Heure maj Distributeur de croquettes
+  homebridge_hidden: true
+sensor.imprimante_bureau:
+  friendly_name: Imprimante du bureau
+  homebridge_hidden: true
+sensor.ssl_cert_expiry:
+  friendly_name: Expiration du certificat dans
+  homebridge_hidden: true
+sensor.sonette_senseur6:
+  friendly_name: Sonette
+  homebridge_hidden: true
+  icon: mdi:bell-ring
+group.rdc:
+  friendly_name: Rez de chaussée
+  order: 100
+  homebridge_hidden: true
+group.ss:
+  friendly_name: Sous-sol
+  order: 150
+  homebridge_hidden: true
+group.ET:
+  friendly_name: Étage
+  order: 200
+  homebridge_hidden: true
+group.EXT:
+  friendly_name: Extérieur
+  order: 250
+  homebridge_hidden: true
+group.DIV:
+  friendly_name: Divers
+  order: 300
+  homebridge_hidden: true
+group.automations:
+  friendly_name: Automatisations
+  order: 275
+  homebridge_hidden: true
+group.default_view:
+  friendly_name: Maison
+  homebridge_hidden: true
+group.rdc_cuisine:
+  friendly_name: Cuisine
+  homebridge_hidden: true
+group.rdc_escalieretage:
+  friendly_name: Escalier vers l'étage
+  homebridge_hidden: true
+group.rdc_salleamanger:
+  friendly_name: Salle à manger
+  homebridge_hidden: true
+group.rdc_salon:
+  friendly_name: Salon
+  homebridge_hidden: true
+group.ss_sallefamiliale:
+  friendly_name: Salle familiale
+  homebridge_hidden: true
+group.ss_cellier:
+  friendly_name: Cellier
+  homebridge_hidden: true
+group.EXT_EntreeRue:
+  friendly_name: Entrée côté rue
+  homebridge_hidden: true
+group.systemmonitoring:
+  friendly_name: Monitoring RasPi salle familiale
+  homebridge_hidden: true
+group.EXT_Veranda:
+  friendly_name: Véranda
+  homebridge_hidden: true
+group.EXT_Garage:
+  friendly_name: Garage
+  homebridge_hidden: true
+group.ET_ChambreParents:
+  friendly_name: Chambre Philo et Guillaume
+  homebridge_hidden: true
+group.ET_SDB_Parents:
+  friendly_name: Salle de bain parents
+  homebridge_hidden: true
+group.printers:
+  friendly_name: Imprimantes
+  homebridge_hidden: true
+group.NAS:
+  friendly_name: Monitoring NAS
+  homebridge_hidden: true
+group.hydro:
+  friendly_name: Infos Hydroquébec
+  homebridge_hidden: true
+group.haveibeenpwned:
+  friendly_name: Have I been pwned ?
+  homebridge_hidden: true
+group.batterylevels:
+  friendly_name: Niveau des batteries
+  homebridge_hidden: true
+group.certinfos:
+  friendly_name: Infos du certificat
+  homebridge_hidden: true
+group.ET_ChambreLouise:
+  friendly_name: Chambre de Louise
+  homebridge_hidden: true
+group.ET_ChambreBasile:
+  friendly_name: Chambre de Basile
+  homebridge_hidden: true
+group.ET_Walkin:
+  friendly_name: Walkin
+  homebridge_hidden: true
+group.chauffage:
+  homebridge_hidden: true
+group.meteo:
+  homebridge_hidden: true
+group.presences:
+  homebridge_hidden: true
+group.speedtest:
+  homebridge_hidden: true
+group.buanderie:
+  homebridge_hidden: true
+group.heartbeats:
+  homebridge_hidden: true
+group.batteries:
+  homebridge_hidden: true
+group.all_automations:
+  homebridge_hidden: true
+group.all_devices:
+  homebridge_hidden: true
+group.all_lights:
+  homebridge_hidden: true
+group.all_locks:
+  homebridge_hidden: true
+group.all_scripts:
+  homebridge_hidden: true
+group.all_switches:
+  homebridge_hidden: true
+group.all_covers:
+  homebridge_hidden: true
+group.et_bureau:
+  friendly_name: Bureau
+  homebridge_hidden: true
+group.calendar:
+  homebridge_hidden: true
+group.sante:
+  friendly_name: Santé
+  homebridge_hidden: true
+group.ext_garage:
+  friendly_name: Garage
+  homebridge_hidden: true
+light.entree_exterieur_gauche:
+  homebridge_hidden: true
+light.entree_exterieur_droit:
+  homebridge_hidden: true
+light.distri_croquettes:
+  friendly_name: Activer distributeur
+  icon: mdi:cat
+light.espurna_0c306e:
+  friendly_name: Entrée droit
+light.espurna_078e54:
+    friendly_name: Entrée gauche
+
+scene.chevet_basile_bleu:
+  homebridge_hidden: true
+scene.chevet_basile_eteint:
+  homebridge_hidden: true
+scene.chevet_basile_lecture:
+  homebridge_hidden: true
+scene.chevet_basile_orange:
+  homebridge_hidden: true
+scene.lapin_de_louise_eteint:
+  homebridge_hidden: true
+scene.lapin_louise_lecture:
+  homebridge_hidden: true
+scene.lapin_louise_mauve:
+  homebridge_hidden: true
+scene.lapin_louise_rose:
+  homebridge_hidden: true
+
+device_tracker.equinox:
+  homebridge_hidden: true
+device_tracker.ipad_de_guillaume:
+  homebridge_hidden: true
+device_tracker.iphoneguillaume:
+  homebridge_hidden: true
+device_tracker.iphonephilo:
+  homebridge_hidden: true
+device_tracker.trackr:
+  homebridge_hidden: true
+
+media_player.kodi_salle_familiale:
+  friendly_name: Kodi salle familiale
+  homebridge_hidden: true
+media_player.kodi_salon:
+  friendly_name: Kodi salon
+  homebridge_hidden: true
+media_player.tele_salon:
+  friendly_name: Chromecast salon
+  homebridge_hidden: true
+media_player.samsung_tv_remote:
+  friendly_name: Télé salon
+  homebridge_hidden: true
+media_player.ampli:
+  friendly_name: ampli
+
+climate.thermostat:
+  friendly_name: Thermostat
+
+switch.hdmi_0:
+  friendly_name: Projecteur
+switch.chauffage_salle_de_bain:
+  icon: mdi:radiator
+switch.creature_jbl:
+  friendly_name: Ampli salon
+
+lock.porte_patio:
+  friendly_name: Porte du jardin
+
+input_boolean.parents_a_la_maison:
+  homebridge_hidden: true
+
+cover.ryobi_gdo_d4f513d3c950:
+  friendly_name: Porte du garage
+  homebridge_cover_type: garage_door

@@ -1,0 +1,22 @@
+  - platform: kodi
+    name: Kodi salle familiale
+    host: !secret kodi_sf_host
+    port: !secret kodi_sf_port
+    username: !secret kodi_sf_username
+    password: !secret kodi_sf_password
+  - platform: kodi
+    name: Kodi salon
+    host: !secret kodi_salon_host
+    port: !secret kodi_salon_port
+    username: !secret kodi_salon_username
+    password: !secret kodi_salon_password
+  - platform: cast
+    host: !secret cast_salon_host
+  - platform: samsungtv
+    host: !secret samsungtv_salon_host
+    scan_interval: 30
+  - platform: denonavr
+    host: !secret denonavr_sf_host
+#  - platform: spotify
+#    client_id: !secret spotify_client_id
+#    client_secret: !secret spotify_client_secret

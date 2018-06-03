@@ -1,0 +1,4 @@
+ET_Walkin:
+  control: hidden
+  entities:
+    - light.plafond_walkin

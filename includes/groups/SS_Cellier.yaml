@@ -1,0 +1,6 @@
+SS_cellier:
+  control: hidden
+  entities:
+    - sensor.temperature_senseur2
+    - sensor.humidite_senseur2
+    - history_graph.temperature_cellier

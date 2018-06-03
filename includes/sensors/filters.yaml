@@ -1,0 +1,17 @@
+#- platform: filter
+#  name: "filtre_temp_chambre_parents"
+#  entity_id: sensor.temperature_senseur3
+#  filters:
+#    - filter: outlier
+#
+#- platform: filter
+#  name: "filtre_temp_garage"
+#  entity_id: sensor.temperature_senseur5
+#  filters:
+#    - filter: outlier
+#
+#- platform: filter
+#  name: "filtre_temp2_garage"
+#  entity_id: sensor.temperature2_senseur5
+#  filters:
+#    - filter: outlier

@@ -1,0 +1,11 @@
+DIV:
+  view: yes
+  entities:
+    - group.systemMonitoring
+    - group.NAS
+    - group.speedtest
+    - group.haveibeenpwned
+    - group.certinfos
+##    - group.batteries
+    - group.sante
+    - group.heartbeats

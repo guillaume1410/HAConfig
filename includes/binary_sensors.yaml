@@ -1,0 +1,8 @@
+  - platform: workday
+    country: !secret workday_country
+    province: !secret workday_province
+  - platform: workday
+    name: workday_tomorrow
+    country: !secret workday_country
+    province: !secret workday_province
+    days_offset: 1
